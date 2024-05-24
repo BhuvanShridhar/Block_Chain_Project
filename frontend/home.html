@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
+    <title id="title"></title>
+    <script>
+      window.onload = function() {
+        const titleElement = document.getElementById('title');
+        const titleText = "Green Grid Nexus";
+        const characters = titleText.split('');
+        let index = 0;
+        let direction = 1;
+    
+        function updateTitle() {
+          if (direction === 1) {
+            if (index < characters.length) {
+              titleElement.textContent += characters[index];
+              index++;
+            } else {
+              direction = -1;
+            }
+          } else {
+            if (index > 1) {
+              index--;
+              titleElement.textContent = characters.slice(0, index).join('');
+            } else {
+              direction = 1;
+            }
+          }
+          setTimeout(updateTitle, 300);
+        }
+    
+        updateTitle();
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="preloader">
+    <div id="spinner"></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var preloader = document.getElementById("preloader");
+    
+    preloader.style.display = "flex";
+    
+    window.addEventListener("load", function () {
+        preloader.style.opacity = 0;
+        setTimeout(function () {
+            preloader.style.display = "none";
+        }, 500);
+    });
+});
+
+</script>
+  <header class="header">
+    <img src="logo.jpeg" alt="" class="im1">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#sponsor">Sponsors</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+  <div class="nav-right">
+    <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+    <a href="#" class="icon-link"><i class="fas fa-wallet"></i></a>
+    <button class="login-button">Login</button>
+  </div>
+    </nav>
+  </header>
+
+    <section id="home" class="section">
+        <div class="fade-container">
+            <p style="font-size: 28px">Welcome To</p><h1 id="fade-text"></h1>
+          </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="about-container">
+          <h2>About Us</h2>
+          <p>We are Green Grid Nexus!! Our goal is to develop a secure and user-friendly peer-to-peer energy marketplace powered by blockchain technology, 
+             empowering both producers and consumers.
+      
+             Producers can directly offer excess renewable energy to consumers, providing potentially cheaper and more local options. 
+      
+             Utilizing smart meters and smart contracts, transactions are automated and secure, ensuring traceable energy trades. 
+             This decentralized system promotes the adoption of renewable energy, reduces reliance on fossil fuels, and fosters a more sustainable energy future.
+          </p>
+        </div>
+      </section>
+      
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">Listings Management</div>
+          <div class="card-content">
+            <p style="color: black; font-size:16px;">Organize cultural festivals or events that include dedicated zones for tech showcases and sports activities.participate in sports tournaments or demonstrations and enjoy cultural performances.
+            </p>
+          </div>
+          <a target="_blank" href="./cultural.pdf" class="card-button" style="font-size: large; color: rgb(10, 10, 10);">Learn More</a>
+        </div>
+    
+        <div class="card">
+          <div class="card-header">Escrow Services</div>
+          <div class="card-content">
+            <p style="color: black; font-size: 16px;">Develop digital platforms or apps that blend cultural experiences, sports content, and technological innovations.live streaming of sports even features that enhance the user experience.
+            </p>
+          </div>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(7, 7, 7); font-size: large;">Learn More</a>
+        </div>
+    
+        <div class="card">
+          <div class="card-header">Decentralized Payments</div>
+          <div class="card-content">
+            <p style="color: black; font-size: 16px;">Develop digital platforms or apps that blend cultural experiences, sports content, and technological innovations.live streaming of sports even features that enhance the user experience.
+            </p>
+          </div>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(12, 12, 12); font-size: large;">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsor" class="section">
+      <h2 style="position: absolute; left: 0px;" id="sponsor-txt">Sponsored By</h2>
+      <div class="sponsor-container">
+        <div class="sponsor-card">
+          <img src="mfc.png" alt="Sponsor 1">
+        </div>
+
+        <div class="sponsor-card">
+          <img src="coin.png" alt="Sponsor 1">
+        </div>
+      </div>
+    </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const isEdge = navigator.userAgentData?.brands?.some(brand => brand.brand === 'Microsoft Edge');
+
+  if (isEdge) {
+    const regTxt = document.getElementById("reg-txt");
+    if (regTxt) {
+      regTxt.style.top = "2900px";
+    }
+  }
+});
+  </script>
+
+<section id="team" class="section">
+  <div class="slideshow-container">
+    <div class="slide slide0">
+      <div class="crew-heading">
+          <h1>THE TEAM</h1>
+      </div>
+  </div>
+  <div class="slide slide1">
+    <h1 style=" margin: 0 auto;font-size:40px; margin-right: 30px;">Developers</h1>
+        <div class="card-container">
+              <div class="card">
+                  <img src="bhav.jpeg" alt="Faculty 2">
+                  <div class="card-details">
+                      <div class="card-name">ANANYA BHAT</div>
+                  </div>
+              </div>
+
+              <div class="card">
+                <img src="nayana.jpeg" alt="Faculty 2">
+                <div class="card-details">
+                    <div class="card-name">SAKSHI K</div>
+                </div>
+            </div>
+
+            <div class="card">
+              <img src="mala.jpeg" alt="Faculty 2">
+              <div class="card-details">
+                  <div class="card-name">HARSHITHA V</div>
+              </div>
+          </div>
+          <div class="card">
+            <img src="kiran.jpeg" alt="Faculty 2">
+            <div class="card-details">
+                <div class="card-name">BHUVAN SHRIDHAR</div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="single-photo mobile-view">
+      <img src="logo.jpeg" alt="Single Photo">
+    </div>
+  
+</section>
+
+
+
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(1)"><span class="arrow">&#9660;</span>Q1. What is the Purpose of the website?</div>
+            <div class="answer" id="answer1">Transparent Energy Transfer</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(2)"><span class="arrow">&#9660;</span>Q2. How to register?</div>
+            <div class="answer" id="answer2">Register from the Registration <a href="#registration">Section.</a></div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(3)"><span class="arrow">&#9660;</span>Q3. When does it start? </div>
+            <div class="answer" id="answer3">23rd Feb 2024</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(4)"><span class="arrow">&#9660;</span>Q4. Why join EssenCSE 2.0?</div>
+            <div class="answer" id="answer4">To have fun and create amazing memories.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(5)"><span class="arrow">&#9660;</span>Q5. What are the timings?</div>
+            <div class="answer" id="answer5">11:30 AM - 4:30 PM</div>
+        </div>
+    </div> 
+</section>
+<footer id="footer">
+    <p>Contact Us: <a href="mailto:contact@example.com"><img src="gmail.jpeg" alt="Email"></a> <a href="https://www.instagram.com/example"><img src="insta.png" alt="Instagram"></a></p>
+    <p>&copy; 2024 Green Grid Nexus ltd.</p>
+  </footer>
+  
+    <div id="offline-message">
+      You are currently offline. Please check your internet connection.
+  </div>
+  <div id="online-message">
+      You are now online.
+  </div>
+   <script>
+        window.addEventListener('online', function() {
+
+            document.getElementById('offline-message').style.display = 'none';
+            document.getElementById('online-message').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('online-message').style.display = 'none';
+            }, 3000);
+        });
+
+        window.addEventListener('offline', function() {
+
+            document.getElementById('offline-message').style.display = 'block';
+            document.getElementById('online-message').style.display = 'none';
+        });
+    </script>
+<script>
+    // Prevent further scrolling beyond the footer
+    let lastScrollTop = 0;
+    let reachedFooter = false;
+
+    window.addEventListener("scroll", function() {
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const footer = document.getElementById("footer");
+        const distanceToTop = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling downwards
+            if (distanceToTop < windowHeight) {
+                // Reached the footer, prevent scrolling downwards
+                reachedFooter = true;
+                window.scrollTo(0, lastScrollTop);
+            }
+        } else {
+            // Scrolling upwards
+            if (reachedFooter && currentScrollTop <= 0) {
+                // Reached the top after reaching the footer, prevent scrolling upwards
+                reachedFooter = false;
+                window.scrollTo(0, 1);
+            }
+        }
+
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    });
+</script>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
