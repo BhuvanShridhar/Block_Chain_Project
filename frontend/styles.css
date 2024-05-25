@@ -56,6 +56,7 @@ nav {
   display: flex;
   gap: 10px;
   position: relative;
+  padding: 10px;
 }
 
 nav a {
@@ -83,7 +84,7 @@ nav a::before {
 }
 
 nav a:hover {
-  color: green;
+  color: rgb(4, 85, 26);
 }
 
 nav a:hover::before {
@@ -128,7 +129,9 @@ section {
     overflow: hidden;
     margin: 0;
     font-size: 58px;
-    animation: fadeInOut 4s ease-in-out infinite;
+    animation: fadeInOut 6s ease-in-out infinite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #efe6e6;
   }
   
   @keyframes fadeInOut {
@@ -165,7 +168,7 @@ section {
   }
   
   .card-header {
-    background-color: #2c7822;
+    background-color: #e3175f;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -204,7 +207,7 @@ section {
     padding: 20px;
     border: 1px solid #e5097f;
     border-radius: 8px;
-    background-color: #dd1dad;
+    background-color: #b04f98;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -267,10 +270,10 @@ section {
   width: 160px;
   height: 250px;
   background-color: transparent;
-  border-color: #ececec;
+  border-color: #eee6e6;
   border-radius: 7px;
   overflow: hidden;
-  margin: 4px;
+  margin: 5px;
   position: relative;
 }
 
@@ -368,6 +371,7 @@ section {
     align-items: center;
     width: 100%;
     text-align: center;
+    padding: 10px;
   }
   
   nav.open {
@@ -404,12 +408,19 @@ footer {
   font-weight: 500;
   text-align: center;
   padding: 6px;
-  font-size: 18px;
+  font-size: 16px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
   margin-top: -20px;
-}
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+     /* Adjust the background color as needed * /* Adjust the text color as needed */
+    padding: 5px; /* Adjust the padding as needed */
+    z-index: 999; /* Ensure a high z-index value */
+  }
+  
 
 footer:hover {
   background-color: #e0e0e0;
@@ -418,7 +429,7 @@ footer:hover {
 }
 footer img {
     width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    height: 40px; /* Maintain aspect ratio */
     margin: 0 5px; /* Adjust margin as needed */
   }
   
@@ -706,7 +717,7 @@ footer img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: -5px 10px;
     background-color: #333;
     color: white;
   }
@@ -721,6 +732,15 @@ footer img {
   .nav-left a:hover, .nav-right a:hover {
     text-decoration: underline;
   }
+  .nav-right {
+    margin-left: auto; /* Move the .nav-right to the rightmost position */
+}
+
+.nav-right .icon-link {
+    margin-left: 70px;
+ /* Adjust the margin to move the wallet icon further right */
+}
+
   
   /* Icon link styling */
   .icon-link {
@@ -734,7 +754,7 @@ footer img {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-left: 200px;
+    margin-left: 150px;
     cursor: pointer;
     border-radius: 5px;
   }
@@ -759,4 +779,34 @@ footer img {
       margin-bottom: 10px;
     }
   }
-  
+  .logo {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 190px;
+  }
+ 
+
+.fade-container {
+    text-align: center;
+    color: white;
+    z-index: 100; /* Ensure text appears on top of the animation */
+}
+
+.animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2; /* Ensure animation appears behind text */
+}
+
+.animation-container img {
+    width: 180%;
+    height: 80%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    margin-right: 500px;
+    margin-top: 230px;
+    opacity: 0.5;
+}

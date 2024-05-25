@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
   <header class="header">
-    <img src="logo.jpeg" alt="" class="im1">
+    <a href="#"><img src="logo.jpeg" alt="Logo" class="logo"></a>
     <div class="hamburger-menu" onclick="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="#faq">FAQ</a>
   <div class="nav-right">
     <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
-    <a href="#" class="icon-link"><i class="fas fa-wallet"></i></a>
+                <a href="#" class="icon-link wallet-icon"><i class="fas fa-wallet"></i></a>
     <button class="login-button">Login</button>
   </div>
     </nav>
@@ -85,9 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <section id="home" class="section">
         <div class="fade-container">
-            <p style="font-size: 28px">Welcome To</p><h1 id="fade-text"></h1>
-          </div>
-    </section>
+            <p style="font-size: 32px; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Welcome To</p>
+            <h1 id="fade-text">Green Grid Nexus</h1>
+            <div class="animation-container">
+                <img src="bg.jpeg" alt="">
+            </div>
+        </div>
+</section>
+
 
     <section id="about" class="section">
         <div class="about-container">
@@ -110,28 +115,35 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card">
           <div class="card-header">Listings Management</div>
           <div class="card-content">
-            <p style="color: black; font-size:16px;">Organize cultural festivals or events that include dedicated zones for tech showcases and sports activities.participate in sports tournaments or demonstrations and enjoy cultural performances.
+            <p style="color: black; font-size: 16px;"> Energy Listings: Producers can create detailed listings for the energy they are offering, including quantity, type (solar, wind, etc.), and price.</p>
+
+                <p style="color: black; font-size: 16px;"> Search and Filter: Consumers can search for and filter listings based on their preferences such as location, type of energy, and price range.</p>
+                    <p style="color: black; font-size: 16px;"> Real-time Availability: Listings are updated in real-time to reflect the current availability of energy.
             </p>
           </div>
-          <a target="_blank" href="./cultural.pdf" class="card-button" style="font-size: large; color: rgb(10, 10, 10);">Learn More</a>
+          <a target="_blank" href="./cultural.pdf" class="card-button" style="font-size: large; color: rgb(10, 10, 10); font-weight: bold;">Take me there</a>
         </div>
     
         <div class="card">
           <div class="card-header">Escrow Services</div>
           <div class="card-content">
-            <p style="color: black; font-size: 16px;">Develop digital platforms or apps that blend cultural experiences, sports content, and technological innovations.live streaming of sports even features that enhance the user experience.
+            <p style="color: black; font-size: 16px;">Smart Contracts: Automate transactions using blockchain-based smart contracts, ensuring that both parties meet their obligations before the transfer of energy and payment.</p>
+            <p style="color: black; font-size: 16px;">Dispute Resolution: A built-in mechanism for resolving disputes between producers and consumers to ensure fairness and transparency.</p>
+            <p style="color: black; font-size: 16px;">Payment Protection: Funds are held in escrow until both parties confirm the completion of the transaction.
             </p>
           </div>
-          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(7, 7, 7); font-size: large;">Learn More</a>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(7, 7, 7); font-size: large; font-weight: bold;">Take me there</a>
         </div>
     
         <div class="card">
           <div class="card-header">Decentralized Payments</div>
           <div class="card-content">
-            <p style="color: black; font-size: 16px;">Develop digital platforms or apps that blend cultural experiences, sports content, and technological innovations.live streaming of sports even features that enhance the user experience.
+            <p style="color: black; font-size: 16px;">Currency Integration: Support for various currencies to enable seamless, cross-border transactions.</p>
+                <p style="color: black; font-size: 16px;">Instant Settlement: Near-instantaneous settlement of payments thanks to blockchain technology, reducing the waiting time for producers to receive their funds.</p>
+                <p style="color: black; font-size: 16px;">Transaction History: Detailed records of all transactions for both producers and consumers, ensuring transparency and traceability.
             </p>
           </div>
-          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(12, 12, 12); font-size: large;">Learn More</a>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(12, 12, 12); font-size: large; font-weight: bold;">Take me there</a>
         </div>
       </div>
     </section>
@@ -173,27 +185,27 @@ document.addEventListener("DOMContentLoaded", function () {
     <h1 style=" margin: 0 auto;font-size:40px; margin-right: 30px;">Developers</h1>
         <div class="card-container">
               <div class="card">
-                  <img src="bhav.jpeg" alt="Faculty 2">
+                  <img src="ananya.jpeg" alt="Faculty 2">
                   <div class="card-details">
                       <div class="card-name">ANANYA BHAT</div>
                   </div>
               </div>
 
               <div class="card">
-                <img src="nayana.jpeg" alt="Faculty 2">
+                <img src="sakshi.jpeg" alt="Faculty 2">
                 <div class="card-details">
                     <div class="card-name">SAKSHI K</div>
                 </div>
             </div>
 
             <div class="card">
-              <img src="mala.jpeg" alt="Faculty 2">
+              <img src="har.jpeg" alt="Faculty 2">
               <div class="card-details">
                   <div class="card-name">HARSHITHA V</div>
               </div>
           </div>
           <div class="card">
-            <img src="kiran.jpeg" alt="Faculty 2">
+            <img src="bhu.jpeg" alt="Faculty 2">
             <div class="card-details">
                 <div class="card-name">BHUVAN SHRIDHAR</div>
             </div>
@@ -213,33 +225,32 @@ document.addEventListener("DOMContentLoaded", function () {
     <h2>FAQ</h2>
     <div class="faq-container">
         <div class="faq-item">
-            <div class="question" onclick="toggleAnswer(1)"><span class="arrow">&#9660;</span>Q1. What is the Purpose of the website?</div>
-            <div class="answer" id="answer1">Transparent Energy Transfer</div>
+            <div class="question" onclick="toggleAnswer(1)"><span class="arrow">&#9660;</span>Q1. What is Green Grid Nexus?</div>
+            <div class="answer" id="answer1">Green Grid Nexus is a platform designed to create a secure and user-friendly peer-to-peer energy marketplace powered by blockchain technology. It connects renewable energy producers directly with consumers, facilitating seamless and transparent energy transactions.</div>
         </div>
     
         <div class="faq-item">
-            <div class="question" onclick="toggleAnswer(2)"><span class="arrow">&#9660;</span>Q2. How to register?</div>
-            <div class="answer" id="answer2">Register from the Registration <a href="#registration">Section.</a></div>
+            <div class="question" onclick="toggleAnswer(2)"><span class="arrow">&#9660;</span>Q2. How does Green Grid Nexus benefit consumers and producers?</div>
+            <div class="answer" id="answer2">For consumers, Green Grid Nexus offers access to locally produced renewable energy at potentially lower costs. For producers, it provides a marketplace to sell excess energy directly to consumers, maximizing their return on investment in renewable energy sources.</a></div>
         </div>
     
         <div class="faq-item">
-            <div class="question" onclick="toggleAnswer(3)"><span class="arrow">&#9660;</span>Q3. When does it start? </div>
-            <div class="answer" id="answer3">23rd Feb 2024</div>
+            <div class="question" onclick="toggleAnswer(3)"><span class="arrow">&#9660;</span>Q3. What types of renewable energy can be traded on Green Grid Nexus? </div>
+            <div class="answer" id="answer3">The platform supports various types of renewable energy including solar, wind, hydro, and biomass. Producers can list specific types of energy they have available, and consumers can choose the type of energy they wish to purchase.</div>
         </div>
     
         <div class="faq-item">
-            <div class="question" onclick="toggleAnswer(4)"><span class="arrow">&#9660;</span>Q4. Why join EssenCSE 2.0?</div>
-            <div class="answer" id="answer4">To have fun and create amazing memories.</div>
+            <div class="question" onclick="toggleAnswer(4)"><span class="arrow">&#9660;</span>Q4. How are transactions secured on Green Grid Nexus?</div>
+            <div class="answer" id="answer4">Transactions on Green Grid Nexus are secured using blockchain technology and smart contracts. This ensures that all trades are transparent, traceable, and immutable, providing security and trust for both producers and consumers.</div>
         </div>
     
         <div class="faq-item">
-            <div class="question" onclick="toggleAnswer(5)"><span class="arrow">&#9660;</span>Q5. What are the timings?</div>
-            <div class="answer" id="answer5">11:30 AM - 4:30 PM</div>
+            <div class="question" onclick="toggleAnswer(5)"><span class="arrow">&#9660;</span>Q5. What payment methods are accepted on Green Grid Nexus?</div>
+            <div class="answer" id="answer5">Green Grid Nexus supports various cryptocurrencies for transactions, leveraging the security and efficiency of blockchain technology. This allows for seamless, decentralized payments without the need for traditional banking intermediaries.</div>
         </div>
     </div> 
 </section>
 <footer id="footer">
-    <p>Contact Us: <a href="mailto:contact@example.com"><img src="gmail.jpeg" alt="Email"></a> <a href="https://www.instagram.com/example"><img src="insta.png" alt="Instagram"></a></p>
     <p>&copy; 2024 Green Grid Nexus ltd.</p>
   </footer>
   
@@ -265,36 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('online-message').style.display = 'none';
         });
     </script>
-<script>
-    // Prevent further scrolling beyond the footer
-    let lastScrollTop = 0;
-    let reachedFooter = false;
 
-    window.addEventListener("scroll", function() {
-        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const footer = document.getElementById("footer");
-        const distanceToTop = footer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (currentScrollTop > lastScrollTop) {
-            // Scrolling downwards
-            if (distanceToTop < windowHeight) {
-                // Reached the footer, prevent scrolling downwards
-                reachedFooter = true;
-                window.scrollTo(0, lastScrollTop);
-            }
-        } else {
-            // Scrolling upwards
-            if (reachedFooter && currentScrollTop <= 0) {
-                // Reached the top after reaching the footer, prevent scrolling upwards
-                reachedFooter = false;
-                window.scrollTo(0, 1);
-            }
-        }
-
-        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-    });
-</script>
 
 
 

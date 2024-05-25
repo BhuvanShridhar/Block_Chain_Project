@@ -104,15 +104,3 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   setInterval(() => {
     showSlide(1);
   }, 5000);
-  
-  content.addEventListener("scroll", function () {
-    clearTimeout(timer);
-  
-    timer = setTimeout(function () {
-      content.scroll({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, 5000);
-  });
-  
