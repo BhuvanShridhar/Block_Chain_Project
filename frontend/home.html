@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="#team">Team</a>
       <a href="#faq">FAQ</a>
   <div class="nav-right">
-    <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+    
                 <a href="#" class="icon-link wallet-icon"><i class="fas fa-wallet"></i></a>
     <button class="login-button">Login</button>
   </div>
@@ -121,8 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p style="color: black; font-size: 16px;"> Real-time Availability: Listings are updated in real-time to reflect the current availability of energy.
             </p>
           </div>
-          <a target="_blank" href="./cultural.pdf" class="card-button" style="font-size: large; color: rgb(10, 10, 10); font-weight: bold;">Take me there</a>
-        </div>
+          <a target="_blank" href="./listings.html" class="card-button" style="font-size: large; color: rgb(10, 10, 10); font-weight: bold;">Take me there</a>        </div>
     
         <div class="card">
           <div class="card-header">Escrow Services</div>
@@ -275,6 +274,48 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('offline-message').style.display = 'block';
             document.getElementById('online-message').style.display = 'none';
         });
+
+        // Preloader
+window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+});
+
+// Hamburger Menu Toggle
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const nav = document.querySelector('nav');
+
+hamburgerMenu.addEventListener('click', () => {
+    nav.classList.toggle('show');
+});
+
+// Online/Offline Message Handling
+function showOnlineStatus(isOnline) {
+    const onlineMessage = document.getElementById('online-message');
+    const offlineMessage = document.getElementById('offline-message');
+
+    if (isOnline) {
+        onlineMessage.classList.add('show');
+        offlineMessage.classList.remove('show');
+        setTimeout(() => {
+            onlineMessage.classList.remove('show');
+        }, 3000);
+    } else {
+        offlineMessage.classList.add('show');
+    }
+}
+
+window.addEventListener('online', () => showOnlineStatus(true));
+window.addEventListener('offline', () => showOnlineStatus(false));
+
+// FAQ Toggle
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    item.querySelector('.question').addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
+
     </script>
 
 

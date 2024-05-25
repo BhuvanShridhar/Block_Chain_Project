@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            position: relative;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./back.jpeg'); /* Replace with the path to your background image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            opacity: 0.8; /* Reduce opacity */
+            z-index: -1; /* Place the image behind the content */
+        }
+        .heading {
+            color: white;
+            text-align: center;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+        .sub-heading {
+            color: rgb(18, 20, 18);
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            height: 300px;
+            width: 800px;
+            gap: 20px;
+        }
+        .energy-company {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        }
+        .energy-company:hover {
+            transform: translateY(-10px); /* Lift up on hover */
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+        .company-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .company-name {
+            font-weight: bold;
+        }
+        .energy-type {
+            font-style: italic;
+        }
+        .show-more-button {
+            margin-top: 50px;
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth background-color transition */
+        }
+        .show-more-button:hover {
+            background-color: #005bb5; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Listing Management</h1>
+    <h2 class="sub-heading">A List of Energy Producers</h2>
+    <div class="container">
+        <div class="energy-company">
+            <img src="solar.png" alt="Company 1 Logo" class="company-logo">
+            <div class="company-name">Vikram Solar</div>
+            <div class="energy-type">Solar Energy</div>
+            <a href="https://www.vikramsolar.com/" target="_blank">
+                <button class="show-more-button">Show More</button>
+            </a>
+        </div>
+        <div class="energy-company">
+            <img src="hm.png" alt="Company 2 Logo" class="company-logo">
+            <div class="company-name">HM Hydro</div>
+            <div class="energy-type">Hydropower</div>
+            <a href="https://www.hm-hydro.com/en/" target="_blank">
+                <button class="show-more-button">Show More</button>
+            </a>
+        </div>
+        <div class="energy-company">
+            <img src="win.png" alt="Company 3 Logo" class="company-logo">
+            <div class="company-name">Vestas</div>
+            <div class="energy-type">Wind Power</div>
+            <a href="https://www.vestas.in/en-in" target="_blank">
+                <button class="show-more-button">Show More</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
