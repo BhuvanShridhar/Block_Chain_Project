@@ -413,12 +413,11 @@ footer {
   border-top-right-radius: 10px;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
   margin-top: -20px;
-    position: fixed;
+    
     bottom: 0;
     width: 100%;
      /* Adjust the background color as needed * /* Adjust the text color as needed */
-    padding: 5px; /* Adjust the padding as needed */
-    z-index: 999; /* Ensure a high z-index value */
+    padding: 5px; /* Adjust the padding as needed */ /* Ensure a high z-index value */
   }
   
 
