@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
+    <title id="title"></title>
+    <script>
+      window.onload = function() {
+        const titleElement = document.getElementById('title');
+        const titleText = "Green Grid Nexus";
+        const characters = titleText.split('');
+        let index = 0;
+        let direction = 1;
+    
+        function updateTitle() {
+          if (direction === 1) {
+            if (index < characters.length) {
+              titleElement.textContent += characters[index];
+              index++;
+            } else {
+              direction = -1;
+            }
+          } else {
+            if (index > 1) {
+              index--;
+              titleElement.textContent = characters.slice(0, index).join('');
+            } else {
+              direction = 1;
+            }
+          }
+          setTimeout(updateTitle, 300);
+        }
+    
+        updateTitle();
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="preloader">
+    <div id="spinner"></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var preloader = document.getElementById("preloader");
+    
+    preloader.style.display = "flex";
+    
+    window.addEventListener("load", function () {
+        preloader.style.opacity = 0;
+        setTimeout(function () {
+            preloader.style.display = "none";
+        }, 500);
+    });
+});
+
+</script>
+  <header class="header">
+    <a href="#"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#sponsor">Sponsors</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+  <div class="nav-right">
+    <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon-link wallet-icon"><i class="fas fa-wallet"></i></a>
+    <button class="login-button">Login</button>
+  </div>
+    </nav>
+  </header>
+
+    <section id="home" class="section">
+        <div class="fade-container">
+            <p style="font-size: 32px; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Welcome To</p>
+            <h1 id="fade-text">Green Grid Nexus</h1>
+            <div class="animation-container">
+                <img src="bg.jpeg" alt="">
+            </div>
+        </div>
+</section>
+
+
+    <section id="about" class="section">
+        <div class="about-container">
+          <h2>About Us</h2>
+          <p>We are Green Grid Nexus!! Our goal is to develop a secure and user-friendly peer-to-peer energy marketplace powered by blockchain technology, 
+             empowering both producers and consumers.
+      
+             Producers can directly offer excess renewable energy to consumers, providing potentially cheaper and more local options. 
+      
+             Utilizing smart meters and smart contracts, transactions are automated and secure, ensuring traceable energy trades. 
+             This decentralized system promotes the adoption of renewable energy, reduces reliance on fossil fuels, and fosters a more sustainable energy future.
+          </p>
+        </div>
+      </section>
+      
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">Listings Management</div>
+          <div class="card-content">
+            <p style="color: black; font-size: 16px;"> Energy Listings: Producers can create detailed listings for the energy they are offering, including quantity, type (solar, wind, etc.), and price.</p>
+
+                <p style="color: black; font-size: 16px;"> Search and Filter: Consumers can search for and filter listings based on their preferences such as location, type of energy, and price range.</p>
+                    <p style="color: black; font-size: 16px;"> Real-time Availability: Listings are updated in real-time to reflect the current availability of energy.
+            </p>
+          </div>
+          <a target="_blank" href="./cultural.pdf" class="card-button" style="font-size: large; color: rgb(10, 10, 10); font-weight: bold;">Take me there</a>
+        </div>
+    
+        <div class="card">
+          <div class="card-header">Escrow Services</div>
+          <div class="card-content">
+            <p style="color: black; font-size: 16px;">Smart Contracts: Automate transactions using blockchain-based smart contracts, ensuring that both parties meet their obligations before the transfer of energy and payment.</p>
+            <p style="color: black; font-size: 16px;">Dispute Resolution: A built-in mechanism for resolving disputes between producers and consumers to ensure fairness and transparency.</p>
+            <p style="color: black; font-size: 16px;">Payment Protection: Funds are held in escrow until both parties confirm the completion of the transaction.
+            </p>
+          </div>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(7, 7, 7); font-size: large; font-weight: bold;">Take me there</a>
+        </div>
+    
+        <div class="card">
+          <div class="card-header">Decentralized Payments</div>
+          <div class="card-content">
+            <p style="color: black; font-size: 16px;">Currency Integration: Support for various currencies to enable seamless, cross-border transactions.</p>
+                <p style="color: black; font-size: 16px;">Instant Settlement: Near-instantaneous settlement of payments thanks to blockchain technology, reducing the waiting time for producers to receive their funds.</p>
+                <p style="color: black; font-size: 16px;">Transaction History: Detailed records of all transactions for both producers and consumers, ensuring transparency and traceability.
+            </p>
+          </div>
+          <a target="_blank" href="./tech.pdf" class="card-button" style="color: rgb(12, 12, 12); font-size: large; font-weight: bold;">Take me there</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsor" class="section">
+      <h2 style="position: absolute; left: 0px;" id="sponsor-txt">Sponsored By</h2>
+      <div class="sponsor-container">
+        <div class="sponsor-card">
+          <img src="mfc.png" alt="Sponsor 1">
+        </div>
+
+        <div class="sponsor-card">
+          <img src="coin.png" alt="Sponsor 1">
+        </div>
+      </div>
+    </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const isEdge = navigator.userAgentData?.brands?.some(brand => brand.brand === 'Microsoft Edge');
+
+  if (isEdge) {
+    const regTxt = document.getElementById("reg-txt");
+    if (regTxt) {
+      regTxt.style.top = "2900px";
+    }
+  }
+});
+  </script>
+
+<section id="team" class="section">
+  <div class="slideshow-container">
+    <div class="slide slide0">
+      <div class="crew-heading">
+          <h1>THE TEAM</h1>
+      </div>
+  </div>
+  <div class="slide slide1">
+    <h1 style=" margin: 0 auto;font-size:40px; margin-right: 30px;">Developers</h1>
+        <div class="card-container">
+              <div class="card">
+                  <img src="ananya.jpeg" alt="Faculty 2">
+                  <div class="card-details">
+                      <div class="card-name">ANANYA BHAT</div>
+                  </div>
+              </div>
+
+              <div class="card">
+                <img src="sakshi.jpeg" alt="Faculty 2">
+                <div class="card-details">
+                    <div class="card-name">SAKSHI K</div>
+                </div>
+            </div>
+
+            <div class="card">
+              <img src="har.jpeg" alt="Faculty 2">
+              <div class="card-details">
+                  <div class="card-name">HARSHITHA V</div>
+              </div>
+          </div>
+          <div class="card">
+            <img src="bhu.jpeg" alt="Faculty 2">
+            <div class="card-details">
+                <div class="card-name">BHUVAN SHRIDHAR</div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="single-photo mobile-view">
+      <img src="logo.jpeg" alt="Single Photo">
+    </div>
+  
+</section>
+
+
+
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(1)"><span class="arrow">&#9660;</span>Q1. What is Green Grid Nexus?</div>
+            <div class="answer" id="answer1">Green Grid Nexus is a platform designed to create a secure and user-friendly peer-to-peer energy marketplace powered by blockchain technology. It connects renewable energy producers directly with consumers, facilitating seamless and transparent energy transactions.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(2)"><span class="arrow">&#9660;</span>Q2. How does Green Grid Nexus benefit consumers and producers?</div>
+            <div class="answer" id="answer2">For consumers, Green Grid Nexus offers access to locally produced renewable energy at potentially lower costs. For producers, it provides a marketplace to sell excess energy directly to consumers, maximizing their return on investment in renewable energy sources.</a></div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(3)"><span class="arrow">&#9660;</span>Q3. What types of renewable energy can be traded on Green Grid Nexus? </div>
+            <div class="answer" id="answer3">The platform supports various types of renewable energy including solar, wind, hydro, and biomass. Producers can list specific types of energy they have available, and consumers can choose the type of energy they wish to purchase.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(4)"><span class="arrow">&#9660;</span>Q4. How are transactions secured on Green Grid Nexus?</div>
+            <div class="answer" id="answer4">Transactions on Green Grid Nexus are secured using blockchain technology and smart contracts. This ensures that all trades are transparent, traceable, and immutable, providing security and trust for both producers and consumers.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(5)"><span class="arrow">&#9660;</span>Q5. What payment methods are accepted on Green Grid Nexus?</div>
+            <div class="answer" id="answer5">Green Grid Nexus supports various cryptocurrencies for transactions, leveraging the security and efficiency of blockchain technology. This allows for seamless, decentralized payments without the need for traditional banking intermediaries.</div>
+        </div>
+    </div> 
+</section>
+<footer id="footer">
+    <p>&copy; 2024 Green Grid Nexus ltd.</p>
+  </footer>
+  
+    <div id="offline-message">
+      You are currently offline. Please check your internet connection.
+  </div>
+  <div id="online-message">
+      You are now online.
+  </div>
+   <script>
+        window.addEventListener('online', function() {
+
+            document.getElementById('offline-message').style.display = 'none';
+            document.getElementById('online-message').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('online-message').style.display = 'none';
+            }, 3000);
+        });
+
+        window.addEventListener('offline', function() {
+
+            document.getElementById('offline-message').style.display = 'block';
+            document.getElementById('online-message').style.display = 'none';
+        });
+    </script>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
