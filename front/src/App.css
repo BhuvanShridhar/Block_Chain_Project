@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  background-image: url('./components/background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.App-logo {
+  width: 300px; /* Adjust the width of the logo */
+  height: 300px; /* Adjust the height of the logo */
+  border-radius: 50%; /* Make the logo circular */
+  animation: rotateLogo 7s linear infinite; /* Add a rotation animation to the logo */
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; Remove this line */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Add animation effect to the text */
+@keyframes textEffect {
+  0% {
+    transform: translateY(-10px); /* Move text up */
+    opacity: 0; /* Make text transparent */
+  }
+  50% {
+    transform: translateY(0); /* Return text to its original position */
+    opacity: 1; /* Make text fully visible */
+  }
+  100% {
+    transform: translateY(-10px); /* Move text up */
+    opacity: 0; /* Make text transparent */
+  }
+}
+
+/* Apply animation to the .App-header class */
+.App-header h1 {
+  animation: textEffect 5s linear infinite; /* Apply animation to the text */
+}
+
+.App-link {
+  color: #61dafb;
+}

@@ -1,0 +1,63 @@
+.navbar-container {
+    background-color: gold; /* Set navbar background color to gold */
+    display: flex;
+    justify-content: space-between; /* Align elements to the start and end */
+    align-items: center;
+    padding: 30px 20px; /* Add some padding */
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-list li {
+    display: inline; /* Display navbar items horizontally */
+    margin-right: 40px; /* Add some space between navbar items */
+  }
+  
+  .navbar-list li a {
+    text-decoration: none;
+    color: black; /* Set navbar item text color */
+    font-weight: bold; /* Make navbar item text bold */
+  }
+  
+  .navbar-list li a:hover {
+    color: #333; /* Change text color on hover */
+    text-decoration: underline; /* Underline text on hover */
+  }
+  
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wallet-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px; /* Add space between wallet icon and login button */
+  }
+  
+  .login-button {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .navbar-logo {
+    border-radius: 80%; /* Make the logo circular */
+    overflow: hidden; /* Hide any content that overflows the circular shape */
+  }
+  
+  .logo {
+    width: 50px; /* Adjust the width of the logo */
+    height: 50px; /* Adjust the height of the logo */
+  }
+  

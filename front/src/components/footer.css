@@ -1,0 +1,11 @@
+.footer {
+     /* Fixed position */
+    bottom: 0; /* Position at the bottom of the viewport */
+    left: 0; /* Position at the left of the viewport */
+    width: 100%; /* Full width */
+    background-color: #fce4ec; /* Light pink background */
+    padding: 5px; /* Add some padding */
+    text-align: center; /* Center align text */
+    color: #333; /* Text color */
+  }
+  

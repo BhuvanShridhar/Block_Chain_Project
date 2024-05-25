@@ -1,0 +1,23 @@
+.slide-container {
+    overflow: hidden; /* Hide overflowing content */
+    background-color: gold; /* Set background color */
+    color: black; /* Set text color */
+    padding: 20px; /* Add padding */
+  }
+  
+  .slide-content {
+    display: inline-block; /* Make content inline */
+    white-space: nowrap; /* Prevent content from wrapping */
+    animation: slide 20s linear infinite; /* Set slide animation */
+    font-size: 25px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%); /* Start from right side */
+    }
+    100% {
+      transform: translateX(-100%); /* End at left side */
+    }
+  }
+  
