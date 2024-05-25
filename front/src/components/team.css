@@ -1,0 +1,66 @@
+.team-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1px; /* Reduce gap between containers */
+  }
+  .team-heading {
+    color: white; /* Set heading color to white */
+    font-size: 50px; /* Adjust font size of the heading */
+    margin-top: 100px;
+        animation: slideInHeading 5s ease-out infinite alternate; /* Add continuous slide-in animation to the heading */
+      }
+      
+      @keyframes slideInHeading {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      
+      
+      @keyframes slideInHeading {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+  
+  
+  .team-container h2 {
+    color: white; /* Set text color to white */
+    font-size: 50px; /* Change font size */
+  }
+  
+  .team-member {
+    width: 15%; /* Adjusted width */
+    border: 2px solid #ebe0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .member-info {
+    padding: 10px;
+  }
+  
+  .member-info img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .member-info p {
+    text-align: center;
+    margin-top: 10px;
+    color: white; /* Set text color to white */
+  }
+  

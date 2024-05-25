@@ -1,0 +1,87 @@
+.about-heading {
+    font-size: 60px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    color: #e7dada; /* Set text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow effect */
+    animation: slideIn 1s ease-out;
+    margin-top: 100px; /* Add slide-in animation */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideLeft {
+    0%, 15% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    25%, 75% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    85%, 100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideRight {
+    0%, 15% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    25%, 75% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    85%, 100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px; /* Add less space between containers */
+  }
+  
+  .vision-container {
+    width: 35%; /* Adjust the width of the containers */
+    border: 2px solid #ebe0e0; /* Set border color */
+    padding: 20px; /* Add padding inside the containers */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Add background color with transparency */
+    animation: slideLeft 7s ease-in-out infinite; /* Add sliding animation */
+    margin-left: 60px;
+  }
+  
+  .mission-container {
+    width: 35%; /* Adjust the width of the containers */
+    border: 2px solid #ebe0e0; /* Set border color */
+    padding: 20px; /* Add padding inside the containers */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Add background color with transparency */
+    animation: slideRight 7s ease-in-out infinite; /* Add sliding animation */
+    margin-right: 60px;
+  }
+  
+  .vision-container h3,
+  .mission-container h3 {
+    color: #ebe3e3; /* Set heading color */
+  }
+  
+  .vision-container p,
+  .mission-container p {
+    color: #ebe0e0; /* Set paragraph color */
+  }
+  

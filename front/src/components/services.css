@@ -1,0 +1,67 @@
+.services-heading {
+    font-size: 60px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    color: #e7dada; /* Set text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow effect */
+    animation: slideIn 1s ease-out; /* Add slide-in animation */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px; /* Add space between service boxes */
+    padding: 0 100px; /* Add padding to the sides */
+    height: 400px;
+  }
+  
+  .service-box {
+    width: 30%;/* Adjust the width of the service boxes */
+    height: 100%;
+    border: 2px solid #ebe0e0; /* Set border color */
+    padding: 20px; /* Add padding inside the service boxes */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Add background color with transparency */
+    transition: transform 0.3s ease; /* Add transition effect */
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px); /* Move the box up on hover */
+  }
+  
+  .service-heading {
+    font-size: 24px; /* Set font size of service heading */
+    font-weight: bold; /* Make the service heading bold */
+    color: #ebe3e3; /* Set service heading color */
+  }
+  
+  .service-description {
+    color: #ebe0e0; /* Set service description color */
+    margin-top: 10px; /* Add some top margin */
+  }
+  
+  .service-button {
+    margin-top: 20px; /* Add top margin to the button */
+    background-color: #b6107c; /* Set button background color */
+    color: white; /* Set button text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .service-button:hover {
+    background-color: #4ca2cc; /* Change button background color on hover */
+  }
+  
