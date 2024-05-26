@@ -52,7 +52,7 @@
   }
   
   .service-button {
-    margin-top: 20px; /* Add top margin to the button */
+    margin-top: 4px; /* Add top margin to the button */
     background-color: #b6107c; /* Set button background color */
     color: white; /* Set button text color */
     padding: 10px 20px; /* Add padding to the button */

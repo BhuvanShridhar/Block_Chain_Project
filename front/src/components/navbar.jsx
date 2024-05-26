@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaWallet } from 'react-icons/fa'; // Import the wallet icon from React Icons
 import './navbar.css';
 
 const Navbar = () => {
@@ -12,10 +11,7 @@ const Navbar = () => {
         <li><a href="#team">Team</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <div className="navbar-icons">
-        <FaWallet className="wallet-icon" /> {/* Use the FaWallet icon */}
-        
-      </div>
+      
     </nav>
   );
 }
