@@ -1,4 +1,4 @@
-# Green Grid Nexus
+# test
 
 -> Conventional energy distribution models are centralized and driven by unsustainable, polluting energy sources, which causes heavy environmental degradation and inefficiency.
 
